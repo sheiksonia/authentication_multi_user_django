@@ -1,0 +1,36 @@
+
+<ul>
+  
+  {% if user.usertype == 'recruiter' %}
+
+  <li class="dropdown"></li>
+    <a href="javascript:void(0)" class="dropbtn text-danger">Add</a>
+    <li><a href="">Add Skill</a></li>
+    <div class="dropdown-content">
+      <a href="{% url 'addskillpage' %}">Add Skill</a>
+      <a href="{% url 'addeducation' %}">Add Education</a>
+      <a href="{% url 'addinterest' %}">Add interest</a>
+      <a href="{% url 'addlanguage' %}">Add Language</a>
+    </div>
+  </li>
+  {% elif user.usertype == 'jobseeker' %}
+
+  <li><a href="{% url 'createjob' %}">create job</a></li>
+
+  {% endif %}
+
+  <li style="float:right"><a href="{% url 'logoutpage' %}">logout</a></li>
+
+</ul>
+   
+
+  
+  
+ 
+  
+
+  
+
+
+    
+  
